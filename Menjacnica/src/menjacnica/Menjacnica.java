@@ -1,27 +1,25 @@
 package menjacnica;
 
-import java.util.GregorianCalendar;
-
 import interfejs.MenjacnicaInterfejs;
 
 public class Menjacnica implements MenjacnicaInterfejs {
 
 	@Override
-	public void dodajKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji) {
-		// TODO Auto-generated method stub
-
+	public void dodajKurs(Kurs kurs, Valuta valuta) {
+		valuta.getKurs().add(kurs);
+		
 	}
 
 	@Override
-	public void obrisiKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji) {
-		// TODO Auto-generated method stub
-
+	public void obrisiKurs(Kurs kurs, Valuta valuta) {
+		valuta.getKurs().remove(kurs);
+		
 	}
 
 	@Override
-	public void pronadjiKurs(GregorianCalendar datum, String naziv) {
-		// TODO Auto-generated method stub
-
+	public int pronadjiKurs(Kurs kurs, Valuta valuta) {
+		return valuta.getKurs().indexOf(kurs);
+		
 	}
 
 }

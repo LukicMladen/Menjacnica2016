@@ -1,9 +1,10 @@
 package interfejs;
 
-import java.util.GregorianCalendar;
+import menjacnica.Kurs;
+import menjacnica.Valuta;
 
 public interface MenjacnicaInterfejs {
-	void dodajKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji);
-	void obrisiKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji);
-	void pronadjiKurs(GregorianCalendar datum, String naziv);
+	void dodajKurs(Kurs kurs, Valuta valuta);
+	void obrisiKurs(Kurs kurs, Valuta valuta);
+	int pronadjiKurs(Kurs kurs, Valuta valuta);
 }
