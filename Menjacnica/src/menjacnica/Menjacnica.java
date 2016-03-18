@@ -6,15 +6,13 @@ public class Menjacnica implements MenjacnicaInterfejs {
 	@Override
 	public void dodajKurs(Kurs kurs, Valuta valuta) {
 		valuta.getKurs().add(0, kurs);
-		
 	}
 
 	@Override
 	public void obrisiKurs(Kurs kurs, Valuta valuta) {
 		if(valuta.getKurs().contains(kurs)){
 			valuta.getKurs().remove(kurs);
-		}
-		
+		}		
 	}
 
 	@Override
