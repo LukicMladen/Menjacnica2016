@@ -7,35 +7,48 @@ public class Kurs {
 	private double prodajniKurs;
 	private double kupovniKurs;
 	private double srednjiKurs;
-	
+
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
+
 	public void setDatum(GregorianCalendar datum) {
-		if(datum==null) System.out.println("Greska!");
-		else this.datum = datum;
+		if (datum == null)
+			System.out.println("Greska!");
+		else
+			this.datum = datum;
 	}
+
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
+
 	public void setProdajniKurs(double prodajniKurs) {
-		if(prodajniKurs<0) System.out.println("Greska!");
+		if (prodajniKurs < 0)
+			System.out.println("Greska!");
 		this.prodajniKurs = prodajniKurs;
 	}
+
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
+
 	public void setKupovniKurs(double kupovniKurs) {
-		if(kupovniKurs<0) System.out.println("Greska!");
+		if (kupovniKurs < 0)
+			System.out.println("Greska!");
 		this.kupovniKurs = kupovniKurs;
 	}
+
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
+
 	public void setSrednjiKurs(double srednjiKurs) {
-		if(srednjiKurs<0) System.out.println("Greska!");
+		if (srednjiKurs < 0)
+			System.out.println("Greska!");
 		this.srednjiKurs = srednjiKurs;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -50,6 +63,7 @@ public class Kurs {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -72,10 +86,11 @@ public class Kurs {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Kurs [datum=" + datum + ", prodajniKurs=" + prodajniKurs + ", kupovniKurs=" + kupovniKurs
 				+ ", srednjiKurs=" + srednjiKurs + "]";
 	}
-	
+
 }

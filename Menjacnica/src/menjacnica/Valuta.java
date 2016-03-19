@@ -6,31 +6,45 @@ public class Valuta {
 	private String naziv;
 	private String skraceniNaziv;
 	private LinkedList<Kurs> kurs;
+
 	public String getNaziv() {
 		return naziv;
 	}
+
 	public void setNaziv(String naziv) {
-		if(naziv == null || naziv.isEmpty()) System.out.println("Greska!");
-		else this.naziv = naziv;
+		if (naziv == null || naziv.isEmpty())
+			System.out.println("Greska!");
+		else
+			this.naziv = naziv;
 	}
+
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
+
 	public void setSkraceniNaziv(String skraceniNaziv) {
-		if(skraceniNaziv == null || skraceniNaziv.isEmpty()) System.out.println("Greska!");
-		else this.skraceniNaziv = skraceniNaziv;
+		if (skraceniNaziv == null || skraceniNaziv.isEmpty())
+			System.out.println("Greska!");
+		else
+			this.skraceniNaziv = skraceniNaziv;
 	}
+
 	public LinkedList<Kurs> getKurs() {
 		return kurs;
 	}
+
 	public void setKurs(LinkedList<Kurs> kurs) {
-		if(kurs==null) System.out.println("Greska!");
-		else this.kurs = kurs;
+		if (kurs == null)
+			System.out.println("Greska!");
+		else
+			this.kurs = kurs;
 	}
+
 	@Override
 	public String toString() {
 		return "Valuta [naziv=" + naziv + ", skraceniNaziv=" + skraceniNaziv + ", kurs=" + kurs + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -39,6 +53,7 @@ public class Valuta {
 		result = prime * result + ((skraceniNaziv == null) ? 0 : skraceniNaziv.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -60,5 +75,5 @@ public class Valuta {
 			return false;
 		return true;
 	}
-	
+
 }
